@@ -2419,11 +2419,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\PAS\\PAS.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\pas-csharp\\PAS.csproj",
       "projectName": "PAS",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\PAS\\PAS.csproj",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\pas-csharp\\PAS.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\PAS\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\pas-csharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

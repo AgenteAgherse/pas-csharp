@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rHD6QeN6I18oeN4soZPqlg8gDZkFV23tPyUeA1xy7phsYVwyG6pomXhQiQVj2bkLUPwimKqFW2zDjvX+WCW7rg==",
+  "dgSpecHash": "TWANJIsUwGmV6JBDF+5yS4qXPcu33hMKuQ4XKbvnk/tU00Btt+bAwhI6Y7xVNIwTTKlq6jDkk3b6d5DgKuhMRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\PAS\\PAS.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Escritorio\\pas-csharp\\PAS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\bitmiracle.libtiff.net\\2.4.649\\bitmiracle.libtiff.net.2.4.649.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\google.protobuf\\3.23.0\\google.protobuf.3.23.0.nupkg.sha512",

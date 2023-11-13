@@ -40,10 +40,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 106);
+            label1.Location = new System.Drawing.Point(38, 106);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(59, 20);
+            label1.Size = new System.Drawing.Size(59, 20);
             label1.TabIndex = 0;
             label1.Text = "Usuario";
             label1.Click += label1_Click;
@@ -51,38 +51,38 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 151);
+            label2.Location = new System.Drawing.Point(23, 151);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new System.Drawing.Size(83, 20);
             label2.TabIndex = 1;
             label2.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(110, 103);
+            txtUsuario.Location = new System.Drawing.Point(110, 103);
             txtUsuario.Margin = new Padding(2);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(192, 27);
+            txtUsuario.Size = new System.Drawing.Size(192, 27);
             txtUsuario.TabIndex = 2;
             txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(110, 151);
+            txtPassword.Location = new System.Drawing.Point(110, 151);
             txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(192, 27);
+            txtPassword.Size = new System.Drawing.Size(192, 27);
             txtPassword.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Image = (System.Drawing.Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(124, 205);
+            button1.Location = new System.Drawing.Point(124, 205);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(151, 57);
+            button1.Size = new System.Drawing.Size(151, 57);
             button1.TabIndex = 4;
             button1.Text = "Ingresar";
             button1.UseVisualStyleBackColor = true;
@@ -91,10 +91,10 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(124, 286);
+            linkLabel1.Location = new System.Drawing.Point(124, 286);
             linkLabel1.Margin = new Padding(2, 0, 2, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(137, 20);
+            linkLabel1.Size = new System.Drawing.Size(137, 20);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Ingresar con Huella";
@@ -102,9 +102,9 @@
             // 
             // LoginView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(395, 360);
+            ClientSize = new System.Drawing.Size(395, 360);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(txtPassword);

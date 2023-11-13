@@ -1,4 +1,4 @@
-﻿//using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PAS.Database
 {
     public class Connection {
-        /*private static MySqlConnection connection = new MySqlConnection("SERVER=localhost;DATABASE=pas;UID=root;PASSWORD=toor");
+        private static MySqlConnection connection = new MySqlConnection("SERVER=localhost;DATABASE=pas;UID=root;PASSWORD=toor");
         public static MySqlConnection Open() {
             if (connection.State == System.Data.ConnectionState.Closed) {
                 connection.Open();
@@ -23,6 +23,6 @@ namespace PAS.Database
                 connection.Close();
             }
             return connection;
-        }*/
+        }
     }
 }

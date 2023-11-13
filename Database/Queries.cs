@@ -1,15 +1,16 @@
-﻿//using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PAS.Database
 {
     public class Queries {
-        /* public static DataTable results(String query) {
+        public static DataTable results(String query) {
              try {
                  using(MySqlCommand cmd = new MySqlCommand(query, Connection.Open())) {
                      MySqlDataReader dr = cmd.ExecuteReader();
@@ -21,8 +22,11 @@ namespace PAS.Database
              } catch (Exception ex)
              {
                  Console.WriteLine(ex.Message);
-                 throw;
-             }
-         }*/
+                #pragma warning disable CS8603 // Posible tipo de valor devuelto de referencia nulo
+                return null;
+                #pragma warning restore CS8603 // Posible tipo de valor devuelto de referencia nulo
+            }
+        }
+        
     }
 }
