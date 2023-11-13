@@ -92,7 +92,7 @@
             button2.BackColor = SystemColors.ActiveCaption;
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new System.Drawing.Point(748, 645);
+            button2.Location = new System.Drawing.Point(725, 645);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(118, 36);
@@ -106,22 +106,23 @@
             button3.BackColor = System.Drawing.Color.Green;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = System.Drawing.Color.White;
-            button3.Location = new System.Drawing.Point(721, 601);
+            button3.Location = new System.Drawing.Point(699, 503);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(167, 36);
             button3.TabIndex = 6;
             button3.Text = "Exportar y Enviar";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // results
             // 
             results.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            results.Location = new System.Drawing.Point(65, 403);
+            results.Location = new System.Drawing.Point(122, 407);
             results.Name = "results";
             results.RowHeadersWidth = 62;
             results.RowTemplate.Height = 33;
-            results.Size = new System.Drawing.Size(603, 257);
+            results.Size = new System.Drawing.Size(520, 257);
             results.TabIndex = 7;
             // 
             // label2

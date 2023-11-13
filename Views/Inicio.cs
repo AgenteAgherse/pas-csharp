@@ -45,7 +45,7 @@ namespace PAS.Views
         {
             this.Hide();
             habilitarBotones(false);
-            Descargar ventana5 = new Descargar(this);
+            Descargar ventana5 = new Descargar(this, (string) adminCredentials[10]);
             ventana5.Show();
         }
 

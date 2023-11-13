@@ -1,4 +1,5 @@
 using PAS.Database;
+using PAS.PDF;
 using PAS.Views;
 using System.Data;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace PAS
         public LoginView()
         {
             InitializeComponent();
+            
             int width = Screen.PrimaryScreen.Bounds.Width;
             int height = Screen.PrimaryScreen.Bounds.Height;
 
