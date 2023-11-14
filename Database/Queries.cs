@@ -10,6 +10,19 @@ using System.Threading.Tasks;
 namespace PAS.Database
 {
     public class Queries {
+
+        public static void sendToDataBase(string sql) {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand(sql, Connection.Open()))
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Acción Realizada.");
+                }
+            } catch (Exception ex) {
+                MessageBox.Show("Verifique bien la acción.");
+            }
+        }
         public static DataTable results(String query) {
              try {
                  using(MySqlCommand cmd = new MySqlCommand(query, Connection.Open())) {

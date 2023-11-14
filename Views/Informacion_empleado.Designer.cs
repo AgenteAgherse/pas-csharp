@@ -30,106 +30,73 @@ namespace PAS.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Informacion_empleado));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
+            identificacion = new TextBox();
+            nombre = new TextBox();
+            direccion = new TextBox();
+            apellido = new TextBox();
+            telefono = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
             label10 = new Label();
             Genero = new ComboBox();
             pictureBox2 = new PictureBox();
+            label6 = new Label();
+            huella = new Button();
+            label7 = new Label();
+            label8 = new Label();
+            inicio_contrato = new DateTimePicker();
+            final = new DateTimePicker();
+            label9 = new Label();
+            acciones = new ComboBox();
+            definir_accion = new Button();
+            label11 = new Label();
+            correo = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // identificacion
             // 
-            textBox1.Location = new System.Drawing.Point(244, 228);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(155, 31);
-            textBox1.TabIndex = 3;
+            identificacion.Location = new System.Drawing.Point(244, 228);
+            identificacion.Margin = new Padding(4);
+            identificacion.Name = "identificacion";
+            identificacion.Size = new System.Drawing.Size(155, 31);
+            identificacion.TabIndex = 3;
             // 
-            // textBox2
+            // nombre
             // 
-            textBox2.Location = new System.Drawing.Point(244, 310);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(155, 31);
-            textBox2.TabIndex = 4;
+            nombre.Location = new System.Drawing.Point(244, 275);
+            nombre.Margin = new Padding(4);
+            nombre.Name = "nombre";
+            nombre.Size = new System.Drawing.Size(155, 31);
+            nombre.TabIndex = 4;
             // 
-            // textBox3
+            // direccion
             // 
-            textBox3.Location = new System.Drawing.Point(244, 269);
-            textBox3.Margin = new Padding(4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(155, 31);
-            textBox3.TabIndex = 5;
+            direccion.Location = new System.Drawing.Point(244, 357);
+            direccion.Margin = new Padding(4);
+            direccion.Name = "direccion";
+            direccion.Size = new System.Drawing.Size(155, 31);
+            direccion.TabIndex = 6;
             // 
-            // textBox4
+            // apellido
             // 
-            textBox4.Location = new System.Drawing.Point(244, 392);
-            textBox4.Margin = new Padding(4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(155, 31);
-            textBox4.TabIndex = 6;
+            apellido.Location = new System.Drawing.Point(244, 316);
+            apellido.Margin = new Padding(4);
+            apellido.Name = "apellido";
+            apellido.Size = new System.Drawing.Size(155, 31);
+            apellido.TabIndex = 7;
             // 
-            // textBox5
+            // telefono
             // 
-            textBox5.Location = new System.Drawing.Point(244, 351);
-            textBox5.Margin = new Padding(4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(155, 31);
-            textBox5.TabIndex = 7;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new System.Drawing.Point(644, 228);
-            textBox6.Margin = new Padding(4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(155, 31);
-            textBox6.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new System.Drawing.Point(644, 269);
-            textBox7.Margin = new Padding(4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new System.Drawing.Size(155, 31);
-            textBox7.TabIndex = 9;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new System.Drawing.Point(644, 310);
-            textBox8.Margin = new Padding(4);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new System.Drawing.Size(155, 31);
-            textBox8.TabIndex = 10;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new System.Drawing.Point(644, 351);
-            textBox9.Margin = new Padding(4);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new System.Drawing.Size(155, 31);
-            textBox9.TabIndex = 11;
+            telefono.Location = new System.Drawing.Point(644, 228);
+            telefono.Margin = new Padding(4);
+            telefono.Name = "telefono";
+            telefono.Size = new System.Drawing.Size(155, 31);
+            telefono.TabIndex = 8;
             // 
             // label1
             // 
@@ -148,7 +115,7 @@ namespace PAS.Views
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new System.Drawing.Point(88, 310);
+            label2.Location = new System.Drawing.Point(88, 275);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(78, 25);
@@ -160,7 +127,7 @@ namespace PAS.Views
             label3.AutoSize = true;
             label3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new System.Drawing.Point(88, 351);
+            label3.Location = new System.Drawing.Point(88, 316);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(78, 25);
@@ -173,7 +140,7 @@ namespace PAS.Views
             label4.AutoSize = true;
             label4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new System.Drawing.Point(88, 392);
+            label4.Location = new System.Drawing.Point(88, 357);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(85, 25);
@@ -192,54 +159,6 @@ namespace PAS.Views
             label5.TabIndex = 17;
             label5.Text = "Telefono";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new System.Drawing.Point(549, 269);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(61, 25);
-            label6.TabIndex = 18;
-            label6.Text = "Huella";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new System.Drawing.Point(549, 310);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(37, 25);
-            label7.TabIndex = 19;
-            label7.Text = "Rol";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new System.Drawing.Point(549, 355);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(62, 25);
-            label8.TabIndex = 20;
-            label8.Text = "Activo";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new System.Drawing.Point(88, 269);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(71, 25);
-            label9.TabIndex = 21;
-            label9.Text = "id_sede";
-            // 
             // button1
             // 
             button1.Location = new System.Drawing.Point(44, 485);
@@ -251,64 +170,12 @@ namespace PAS.Views
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.ActiveCaption;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new System.Drawing.Point(786, 485);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(118, 36);
-            button2.TabIndex = 24;
-            button2.Text = "Eliminar ";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = SystemColors.ActiveCaption;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new System.Drawing.Point(496, 485);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(118, 36);
-            button3.TabIndex = 25;
-            button3.Text = "Agregar";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = SystemColors.ActiveCaption;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new System.Drawing.Point(644, 485);
-            button4.Margin = new Padding(4);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(118, 36);
-            button4.TabIndex = 26;
-            button4.Text = "Editar";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ActiveCaption;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.ForeColor = SystemColors.ButtonFace;
-            button5.Location = new System.Drawing.Point(352, 485);
-            button5.Margin = new Padding(4);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(118, 36);
-            button5.TabIndex = 27;
-            button5.Text = "Buscar";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // label10
             // 
             label10.AutoSize = true;
             label10.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label10.ForeColor = SystemColors.ButtonHighlight;
-            label10.Location = new System.Drawing.Point(545, 398);
+            label10.Location = new System.Drawing.Point(559, 281);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(69, 25);
@@ -318,7 +185,7 @@ namespace PAS.Views
             // Genero
             // 
             Genero.FormattingEnabled = true;
-            Genero.Location = new System.Drawing.Point(641, 406);
+            Genero.Location = new System.Drawing.Point(644, 278);
             Genero.Name = "Genero";
             Genero.Size = new System.Drawing.Size(158, 33);
             Genero.TabIndex = 29;
@@ -335,37 +202,150 @@ namespace PAS.Views
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new System.Drawing.Point(567, 333);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(61, 25);
+            label6.TabIndex = 30;
+            label6.Text = "Huella";
+            // 
+            // huella
+            // 
+            huella.Location = new System.Drawing.Point(668, 327);
+            huella.Margin = new Padding(4);
+            huella.Name = "huella";
+            huella.Size = new System.Drawing.Size(118, 36);
+            huella.TabIndex = 31;
+            huella.Text = "Capturar";
+            huella.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new System.Drawing.Point(499, 383);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(129, 25);
+            label7.TabIndex = 32;
+            label7.Text = "Inicio Contrato";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new System.Drawing.Point(518, 431);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(110, 25);
+            label8.TabIndex = 33;
+            label8.Text = "Fin Contrato";
+            // 
+            // inicio_contrato
+            // 
+            inicio_contrato.Location = new System.Drawing.Point(644, 383);
+            inicio_contrato.Name = "inicio_contrato";
+            inicio_contrato.Size = new System.Drawing.Size(300, 31);
+            inicio_contrato.TabIndex = 34;
+            // 
+            // final
+            // 
+            final.Location = new System.Drawing.Point(644, 426);
+            final.Name = "final";
+            final.Size = new System.Drawing.Size(300, 31);
+            final.TabIndex = 35;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label9.ForeColor = SystemColors.ButtonHighlight;
+            label9.Location = new System.Drawing.Point(445, 499);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(105, 25);
+            label9.TabIndex = 36;
+            label9.Text = "Tipo Acción";
+            // 
+            // acciones
+            // 
+            acciones.FormattingEnabled = true;
+            acciones.Items.AddRange(new object[] { "Agregar", "Buscar", "Editar", "Eliminar" });
+            acciones.Location = new System.Drawing.Point(568, 496);
+            acciones.Name = "acciones";
+            acciones.Size = new System.Drawing.Size(182, 33);
+            acciones.TabIndex = 37;
+            acciones.Text = "Seleccione...";
+            acciones.SelectedIndexChanged += acciones_SelectedIndexChanged;
+            // 
+            // definir_accion
+            // 
+            definir_accion.Location = new System.Drawing.Point(787, 493);
+            definir_accion.Margin = new Padding(4);
+            definir_accion.Name = "definir_accion";
+            definir_accion.Size = new System.Drawing.Size(118, 36);
+            definir_accion.TabIndex = 38;
+            definir_accion.Text = "Aceptar";
+            definir_accion.UseVisualStyleBackColor = true;
+            definir_accion.Click += definir_accion_Click;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label11.ForeColor = SystemColors.ButtonHighlight;
+            label11.Location = new System.Drawing.Point(100, 405);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(66, 25);
+            label11.TabIndex = 39;
+            label11.Text = "Correo";
+            // 
+            // correo
+            // 
+            correo.Location = new System.Drawing.Point(244, 405);
+            correo.Margin = new Padding(4);
+            correo.Name = "correo";
+            correo.Size = new System.Drawing.Size(155, 31);
+            correo.TabIndex = 40;
+            // 
             // Informacion_empleado
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             ClientSize = new System.Drawing.Size(1000, 562);
-            Controls.Add(Genero);
-            Controls.Add(label10);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(correo);
+            Controls.Add(label11);
+            Controls.Add(definir_accion);
+            Controls.Add(acciones);
             Controls.Add(label9);
+            Controls.Add(final);
+            Controls.Add(inicio_contrato);
             Controls.Add(label8);
             Controls.Add(label7);
+            Controls.Add(huella);
             Controls.Add(label6);
+            Controls.Add(Genero);
+            Controls.Add(label10);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(telefono);
+            Controls.Add(apellido);
+            Controls.Add(direccion);
+            Controls.Add(nombre);
+            Controls.Add(identificacion);
             Controls.Add(pictureBox2);
             Margin = new Padding(4);
             Name = "Informacion_empleado";
@@ -378,30 +358,29 @@ namespace PAS.Views
 
         #endregion
         private PictureBox pictureBox2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private TextBox identificacion;
+        private TextBox nombre;
+        private TextBox direccion;
+        private TextBox apellido;
+        private TextBox telefono;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
         private Label label10;
         private ComboBox Genero;
+        private Label label6;
+        private Button huella;
+        private Label label7;
+        private Label label8;
+        private DateTimePicker inicio_contrato;
+        private DateTimePicker final;
+        private Label label9;
+        private ComboBox acciones;
+        private Button definir_accion;
+        private Label label11;
+        private TextBox correo;
     }
 }
