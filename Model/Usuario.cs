@@ -13,7 +13,7 @@ namespace PAS.Model
         private BigInteger identificacion;
         private string nombre, apellido, direccion, telefono, genero, rol, correo;
         private int sede;
-        private Blob huella;
+        private string tarjeta;
         private bool activo;
         private string inicio, fin;
 
@@ -29,6 +29,7 @@ namespace PAS.Model
             this.activo = true;
             this.inicio = "";
             this.fin = "";
+            this.tarjeta = "";
         }
 
         public Usuario(BigInteger identificacion, string nombre, string apellido, string direccion, 
@@ -59,7 +60,7 @@ namespace PAS.Model
         public string Inicio { get { return this.inicio; } }
         public string Final { get { return this.fin; } }
 
-        //public Blob Huella { get { return this.huella; } }
+        public string Tarjeta { get { return this.tarjeta; } }
 
         public void setIdentificacion(BigInteger identificacion) {
             this.identificacion = identificacion;
@@ -76,37 +77,33 @@ namespace PAS.Model
         public void setCorreo(string correo) { this.correo = correo; }
         public void setInicio(string inicio) { this.inicio = inicio; }
         public void setFinal(string final) { this.fin = final; }
-
-        //public void setHuella(Blob huella) { this.huella = huella; }
+        public void setTarjeta(string tarjeta) { this.tarjeta = tarjeta; }
 
         public string AddToDataBase()
         {
             return "INSERT INTO usuarios(" +
-                "identificacion, " +
-                "id_sede, " +
-                "nombre, " +
-                "apellido, " +
-                "direccion, " +
-                "telefono, " +
-                "genero, " +
-                "rol, " +
-                "activo, " +
-                "correo) " +
+                "identificacion, id_sede, nombre, apellido, direccion, telefono, genero, tarjeta, rol, activo, correo) VALUES (" +
 
-                "VALUES (" + 
-
-                identificacion + 
-                ",1,'" + nombre + "','" + 
-                apellido + "','" + 
-                direccion + "','" + 
-                telefono + "','" + 
-                genero + "','" + 
-                rol + "',1,'" + 
-                correo + "');";
+                identificacion +
+                ",1,'"
+                + nombre
+                + "','" + apellido
+                + "','" + direccion
+                + "','" + telefono
+                + "','" + genero +
+                "','" + tarjeta +
+                "','"+rol + 
+                "',1,'" + 
+                correo + "')";
         }
 
         public string searchUser(BigInteger identificacion) {
             return "SELECT * FROM usuarios WHERE identificacion=" + identificacion + ";";
+        }
+
+        public string searchByCard(string card)
+        {
+            return "SELECT * FROM usuarios WHERE tarjeta = '" + card + "';";
         }
 
         public string updateUser()
@@ -121,7 +118,8 @@ namespace PAS.Model
         }
         public string deleteUser(BigInteger identificacion)
         {
-            return "DELETE FROM usuarios WHERE identificacion=" + identificacion + ";";
+            // La tabla de usuarios contiene un trigger para cancelar el contrato también.
+            return "UPDATE usuarios SET activo = 0 WHERE identificacion=" + identificacion + ";";
         }
 
         public void toClass(DataRow usuario)
@@ -133,9 +131,11 @@ namespace PAS.Model
             this.direccion = (string)usuario[4];
             this.telefono = (string)usuario[5];
             this.genero = (string)usuario[6];
-            this.rol = (string)usuario[8];
-            this.activo = (bool)usuario[9];
-            this.correo = (string)usuario[10];
+            this.rol = (string)usuario[7];
+            this.activo = (bool)usuario[8];
+            this.correo = (string)usuario[9];
+            this.tarjeta = (string)usuario[10];
+            
         }
     }
 }

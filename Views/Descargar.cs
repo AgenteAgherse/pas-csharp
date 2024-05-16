@@ -32,16 +32,17 @@ namespace PAS.Views
 
         private void Buscar_Click(object sender, EventArgs e)
         {
+            Boolean filtro = false;
+            Boolean repetido = false;
             results.Enabled = true;
-            string sql = "SELECT tipo_registro, hora, dia FROM registro WHERE id_usuario=";
-            if (identificacion.Text != "" && identificacion != null)
+
+            string sql = "SELECT tipo_registro, hora, dia FROM registro WHERE ";
+
+            if (identificacion.Text.Length > 0)
+                sql += "id_usuario='" + identificacion.Text + "';";
+            else if (telefono.Text.Length > 0)
             {
-                BigInteger identification = BigInteger.Parse(this.identificacion.Text);
-                sql += "" + identification + ";";
-            }
-            else if (nombres.Text != "" && nombres.Text != null)
-            {
-                sql += "" + buscarPorNombre(nombres.Text) + ";";
+                sql += "id_usuario='" + buscarPorTelefono(telefono.Text) + "';";
             }
 
             consulta(Queries.results(sql));
@@ -71,43 +72,42 @@ namespace PAS.Views
             }
             else
             {
-                MessageBox.Show("No se encuentra a la persona.");
+                MessageBox.Show("No se encuentra a la persona o registros de entrada.");
             }
         }
 
-        private BigInteger buscarPorNombre(string nombre)
+        private long buscarPorTelefono(string telefono)
         {
-            string[] data = nombre.Split(' ');
-            MessageBox.Show(data[0] + " " + data[1] + " " + data[2]);
-            string sql = "SELECT identificacion FROM usuarios WHERE ";
-            if (data.Length == 3)
-            {
-                sql += "nombre LIKE '%" + data[0] + "%' AND apellido LIKE '%" + data[1] + " " + data[2] + "%';";
-            }
-            else if (data.Length == 4)
-            {
-                sql += "nombre LIKE '%" + data[0] + " " + data[1] + "%' AND apellido LIKE '%" + data[1] + " " + data[2] + "%';";
-            }
+            Boolean condition = false;
+            string sql = "SELECT identificacion FROM usuarios WHERE telefono = '" + telefono + "'";
+
 
             DataTable result = Queries.results(sql);
-
-            return (result != null) ? (UInt32)result.Rows[0][0] : 0;
+            identificacion.Text = (result != null) ? "" + (UInt32)result.Rows[0][0] : "";
+            return (result != null) ? (UInt32)result.Rows[0][0] : -1;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            BigInteger id = 0;
+            /*BigInteger id = 0;
 
-            if (identificacion.Text != "" || identificacion.Text != " ") {
+            if (identificacion.Text != "" || identificacion.Text != " ")
+            {
                 id = BigInteger.Parse(this.identificacion.Text);
             }
-            else if (nombres.Text != "" || nombres.Text != " ") {
-                id = buscarPorNombre(nombres.Text);
+            else if (telefono.Text != "" || telefono.Text != " ")
+            {
+                id = buscarPorNombre(telefono.Text);
             }
-            else {return;}
+            else { return; }*/
 
-            sendTo.sendEmail(CreatePDF.Create(id), this.correoAdmin);
+            //sendTo.sendEmail(CreatePDF.Create(id), this.correoAdmin);
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("En caso de no saber la información de la cédula, ingrese el número de teléfono sin espacios.");
         }
     }
 }

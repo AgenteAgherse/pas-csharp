@@ -20,7 +20,7 @@ namespace PAS.Database
                     MessageBox.Show("Acción Realizada.");
                 }
             } catch (Exception ex) {
-                MessageBox.Show("Verifique bien la acción.");
+                MessageBox.Show("Verifique bien la acción.\n" + ex.Message);
             }
         }
         public static DataTable results(String query) {

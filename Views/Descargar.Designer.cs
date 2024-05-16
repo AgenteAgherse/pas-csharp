@@ -37,7 +37,8 @@
             button3 = new Button();
             results = new DataGridView();
             label2 = new Label();
-            nombres = new TextBox();
+            telefono = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)results).BeginInit();
             SuspendLayout();
@@ -66,12 +67,12 @@
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new System.Drawing.Point(13, 295);
+            label1.Location = new System.Drawing.Point(83, 298);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(311, 25);
+            label1.Size = new System.Drawing.Size(231, 25);
             label1.TabIndex = 3;
-            label1.Text = "Ingresa la identificacion del empleado";
+            label1.Text = "Identificacion del empleado";
             // 
             // Buscar
             // 
@@ -92,7 +93,7 @@
             button2.BackColor = SystemColors.ActiveCaption;
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new System.Drawing.Point(725, 645);
+            button2.Location = new System.Drawing.Point(1000, 667);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(118, 36);
@@ -106,7 +107,7 @@
             button3.BackColor = System.Drawing.Color.Green;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = System.Drawing.Color.White;
-            button3.Location = new System.Drawing.Point(699, 503);
+            button3.Location = new System.Drawing.Point(968, 580);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(167, 36);
@@ -118,11 +119,11 @@
             // results
             // 
             results.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            results.Location = new System.Drawing.Point(122, 407);
+            results.Location = new System.Drawing.Point(28, 407);
             results.Name = "results";
             results.RowHeadersWidth = 62;
             results.RowTemplate.Height = 33;
-            results.Size = new System.Drawing.Size(520, 257);
+            results.Size = new System.Drawing.Size(906, 296);
             results.TabIndex = 7;
             // 
             // label2
@@ -130,28 +131,40 @@
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new System.Drawing.Point(122, 351);
+            label2.Location = new System.Drawing.Point(235, 354);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(202, 25);
+            label2.Size = new System.Drawing.Size(79, 25);
             label2.TabIndex = 8;
-            label2.Text = "Por Nombre y Apellidos";
+            label2.Text = "Teléfono";
             // 
-            // nombres
+            // telefono
             // 
-            nombres.Location = new System.Drawing.Point(332, 348);
-            nombres.Margin = new Padding(4);
-            nombres.Name = "nombres";
-            nombres.Size = new System.Drawing.Size(396, 31);
-            nombres.TabIndex = 9;
+            telefono.Location = new System.Drawing.Point(332, 348);
+            telefono.Margin = new Padding(4);
+            telefono.Name = "telefono";
+            telefono.Size = new System.Drawing.Size(396, 31);
+            telefono.TabIndex = 9;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.information;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new System.Drawing.Point(873, 322);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(37, 34);
+            button1.TabIndex = 10;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Descargar
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            ClientSize = new System.Drawing.Size(928, 694);
-            Controls.Add(nombres);
+            ClientSize = new System.Drawing.Size(1165, 734);
+            Controls.Add(button1);
+            Controls.Add(telefono);
             Controls.Add(label2);
             Controls.Add(results);
             Controls.Add(button3);
@@ -180,6 +193,7 @@
         private Button button3;
         private DataGridView results;
         private Label label2;
-        private TextBox nombres;
+        private TextBox telefono;
+        private Button button1;
     }
 }

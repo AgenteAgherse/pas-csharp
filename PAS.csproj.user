@@ -7,6 +7,9 @@
     <Compile Update="Views\Descargar.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\EstadoHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Informacion_empleado.cs">
       <SubType>Form</SubType>
     </Compile>

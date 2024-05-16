@@ -55,6 +55,8 @@ namespace PAS.Views
             definir_accion = new Button();
             label11 = new Label();
             correo = new TextBox();
+            button2 = new Button();
+            cardResponse = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -210,19 +212,20 @@ namespace PAS.Views
             label6.Location = new System.Drawing.Point(567, 333);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(61, 25);
+            label6.Size = new System.Drawing.Size(62, 25);
             label6.TabIndex = 30;
-            label6.Text = "Huella";
+            label6.Text = "Tarjeta";
             // 
             // huella
             // 
-            huella.Location = new System.Drawing.Point(668, 327);
+            huella.Location = new System.Drawing.Point(644, 327);
             huella.Margin = new Padding(4);
             huella.Name = "huella";
             huella.Size = new System.Drawing.Size(118, 36);
             huella.TabIndex = 31;
             huella.Text = "Capturar";
             huella.UseVisualStyleBackColor = true;
+            huella.Click += huella_Click;
             // 
             // label7
             // 
@@ -287,7 +290,7 @@ namespace PAS.Views
             // 
             // definir_accion
             // 
-            definir_accion.Location = new System.Drawing.Point(787, 493);
+            definir_accion.Location = new System.Drawing.Point(757, 496);
             definir_accion.Margin = new Padding(4);
             definir_accion.Name = "definir_accion";
             definir_accion.Size = new System.Drawing.Size(118, 36);
@@ -316,12 +319,34 @@ namespace PAS.Views
             correo.Size = new System.Drawing.Size(155, 31);
             correo.TabIndex = 40;
             // 
+            // button2
+            // 
+            button2.BackgroundImage = Properties.Resources.information;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.Location = new System.Drawing.Point(817, 228);
+            button2.Margin = new Padding(4);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(36, 36);
+            button2.TabIndex = 41;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // cardResponse
+            // 
+            cardResponse.AutoSize = true;
+            cardResponse.Location = new System.Drawing.Point(784, 333);
+            cardResponse.Name = "cardResponse";
+            cardResponse.Size = new System.Drawing.Size(0, 25);
+            cardResponse.TabIndex = 42;
+            // 
             // Informacion_empleado
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
             ClientSize = new System.Drawing.Size(1000, 562);
+            Controls.Add(cardResponse);
+            Controls.Add(button2);
             Controls.Add(correo);
             Controls.Add(label11);
             Controls.Add(definir_accion);
@@ -382,5 +407,7 @@ namespace PAS.Views
         private Button definir_accion;
         private Label label11;
         private TextBox correo;
+        private Button button2;
+        private Label cardResponse;
     }
 }

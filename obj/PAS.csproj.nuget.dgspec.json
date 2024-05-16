@@ -43,6 +43,10 @@
             "IronPdf": {
               "target": "Package",
               "version": "[2023.11.7, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

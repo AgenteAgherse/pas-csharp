@@ -11,7 +11,7 @@ namespace PAS
         public LoginView()
         {
             InitializeComponent();
-            
+
             int width = Screen.PrimaryScreen.Bounds.Width;
             int height = Screen.PrimaryScreen.Bounds.Height;
 
@@ -33,7 +33,8 @@ namespace PAS
             string password = txtPassword.Text;
             string sql = "SELECT * FROM admin WHERE username = '" + username + "' AND password = sha('" + txtPassword.Text + "');";
             DataTable results = Queries.results(sql);
-            if (results == null || results.Rows.Count == 0) {
+            if (results == null || results.Rows.Count == 0)
+            {
                 MessageBox.Show("Credenciales erroneas.");
                 return;
             }
@@ -45,8 +46,8 @@ namespace PAS
 
             //Se oculta el proceso del login para evitar problemas.
             this.Hide();
-            Inicio ventanainicio  = new Inicio(admin);
-            ventanainicio.Show(); 
+            Inicio ventanainicio = new Inicio(admin);
+            ventanainicio.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,13 +55,13 @@ namespace PAS
 
         }
 
-       /* private void showMainWindow()
-        {
-            Boolean isVisible = true;
-            Inicio mainWindow = new Inicio();
-            mainWindow.Show();
+        /* private void showMainWindow()
+         {
+             Boolean isVisible = true;
+             Inicio mainWindow = new Inicio();
+             mainWindow.Show();
 
-        }*/
+         }*/
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {

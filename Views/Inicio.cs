@@ -45,7 +45,7 @@ namespace PAS.Views
         {
             this.Hide();
             habilitarBotones(false);
-            Descargar ventana5 = new Descargar(this, (string) adminCredentials[10]);
+            Descargar ventana5 = new Descargar(this, (string) adminCredentials[9]);
             ventana5.Show();
         }
 
@@ -72,9 +72,12 @@ namespace PAS.Views
             button3.Enabled = habilitar;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+        private void button3_Click(object sender, EventArgs e) {
+            this.Visible = false;
+            RegistroEntradas ventanaEntradas = new RegistroEntradas(this);
         }
+
+
+        
     }
 }
