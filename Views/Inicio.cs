@@ -51,7 +51,7 @@ namespace PAS.Views
 
         private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            System.Windows.Forms.Application.Exit();
 
         }
 

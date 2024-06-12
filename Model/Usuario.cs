@@ -113,8 +113,9 @@ namespace PAS.Model
                     + "', direccion = '" + direccion
                     + "', telefono = '" + telefono
                     + "', genero = '" + genero
-                    + "', correo = '" + correo + "' " +
-                    "WHERE identificacion = " + identificacion  + ";";
+                    + "', correo = '" + correo + "' "
+                    + " , tarjeta = '" + tarjeta + "' "
+                    + "WHERE identificacion = " + identificacion  + ";";
         }
         public string deleteUser(BigInteger identificacion)
         {
@@ -134,8 +135,8 @@ namespace PAS.Model
             this.rol = (string)usuario[7];
             this.activo = (bool)usuario[8];
             this.correo = (string)usuario[9];
-            this.tarjeta = (string)usuario[10];
-            
+            this.tarjeta = (usuario[10] != null) ? usuario[10] as string : null;
+
         }
     }
 }

@@ -107,7 +107,6 @@ namespace PAS.Views
                     }
 
                     sql = usuario.AddToDataBase();
-                    MessageBox.Show(sql);
                     Queries.sendToDataBase(sql);
 
                     sql = ListOfResults.crearContrato("" + usuario.Identificacion, usuario.Inicio, usuario.Final);

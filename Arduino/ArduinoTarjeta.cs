@@ -28,11 +28,13 @@ namespace PAS.Arduino
                     if (serialPort.BytesToRead > 0)
                     {
                         receivedData = serialPort.ReadLine();
+                        serialPort.Close();
                         break;
                     }
                 }
+                serialPort.Close();
             }
-
+            
             return receivedData;
 
         }

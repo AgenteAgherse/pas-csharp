@@ -38,20 +38,21 @@ namespace PAS.Views
         }
 
 
-        private void addTextMessage(string text) {
+        private void addTextMessage(string text)
+        {
             if (mensajes.InvokeRequired)
                 mensajes.Invoke(new Action<string>(addTextMessage), text);
             else
-                mensajes.Text += text;
+                mensajes.Text += "\n" + text;
         }
 
 
 
-        private void getMessage() {
+        private void getMessage()
+        {
             while (true)
             {
                 string data = Arduino.ArduinoTarjeta.SeriaConnection();
-                
                 string cardResponseSQL = "SELECT identificacion FROM usuarios WHERE tarjeta = '" + data + "'";
                 DataTable dataTable = Queries.results(cardResponseSQL);
 
@@ -69,11 +70,12 @@ namespace PAS.Views
                     {
 
                         dataRow = dataTable.Rows[0];
-                        
+
                         string response = "(" + dataRow[0] + " " + dataRow[1] + ") -> " + dataRow[2] + " " + dataRow[3] + "\n";
                         addTextMessage(response); // Problema
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show("No hay registro");
                     }
                 }

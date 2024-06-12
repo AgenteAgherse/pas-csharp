@@ -89,7 +89,7 @@ namespace PAS.Views
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*BigInteger id = 0;
+            BigInteger id = 0;
 
             if (identificacion.Text != "" || identificacion.Text != " ")
             {
@@ -97,11 +97,11 @@ namespace PAS.Views
             }
             else if (telefono.Text != "" || telefono.Text != " ")
             {
-                id = buscarPorNombre(telefono.Text);
+                id = buscarPorTelefono(telefono.Text);
             }
-            else { return; }*/
+            else { return; }
 
-            //sendTo.sendEmail(CreatePDF.Create(id), this.correoAdmin);
+            sendTo.sendEmail(CreatePDF.Create(id), this.correoAdmin);
 
         }
 

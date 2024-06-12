@@ -37,6 +37,7 @@
             mensajes.Location = new System.Drawing.Point(46, 101);
             mensajes.Multiline = true;
             mensajes.Name = "mensajes";
+            mensajes.ReadOnly = true;
             mensajes.ScrollBars = ScrollBars.Vertical;
             mensajes.Size = new System.Drawing.Size(498, 326);
             mensajes.TabIndex = 0;
