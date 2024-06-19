@@ -39,7 +39,7 @@ namespace PAS.PDF
         }
 
         private static string GetPlantilla(DataRow persona, DataTable registros)
-        {
+        {             
             string documento =
                 "<!DOCTYPE html>\n" +
                 "<html lang='es'>\n" +
@@ -87,8 +87,7 @@ namespace PAS.PDF
                         "<p> <strong> Nombre:</strong>" + persona[2] + " " + persona[3] + "</p>\n" +
                         "<p> <strong> Identificación: </strong>" + persona[0] + "</p>\n" +
                         "<p> <strong> Dirección:</strong>" + persona[4] + "</p>\n" +
-                        "<p> <strong> Teléfono:</strong>" + persona[5] + "</p>\n" +
-                        "<p> <strong> Rol:</strong>" + persona[8] + "</p>\n" +
+                        "<p> <strong> Teléfono: </strong>" + persona[5] + "</p>\n" +
                     "</section>\n" +
                     "<section>\n" +
                         "<h2>Registro de Actividades</h2>\n" +
@@ -107,8 +106,11 @@ namespace PAS.PDF
             if (registros != null) {
                 for (int i = 0; i < registros.Rows.Count; i++)
                 {
+                    DateTime fecha = (DateTime)registros.Rows[i][0];
+                    DateTime soloFecha = fecha.Date;
+                    string fechaString = soloFecha.ToString("yyyy-MM-dd");
                     documento += "<tr>\n" +
-                                    "<td>" + registros.Rows[i][0] + "</td>\n" +
+                                    "<td>" + fechaString + "</td>\n" +
                                     "<td>" + registros.Rows[i][1] + "</td>\n" +
                                     "<td>" + registros.Rows[i][2] + "</td>\n" +
                                 "</tr>\n";

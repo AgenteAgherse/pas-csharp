@@ -43,7 +43,7 @@ namespace PAS.Views
             if (mensajes.InvokeRequired)
                 mensajes.Invoke(new Action<string>(addTextMessage), text);
             else
-                mensajes.Text += "\n" + text;
+                mensajes.Text = text;
         }
 
 

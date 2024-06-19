@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>icono.ico</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +33,17 @@
   <ItemGroup>
     <PackageReference Include="IronPdf" Version="2023.11.7" />
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="media\icons\icono.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="media\icons\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
